@@ -1,11 +1,16 @@
-import { defineComponent, ref } from 'vue'
+import { defineComponent } from 'vue'
+import { RouterLink, RouterView } from 'vue-router'
 export const App = defineComponent({
   setup() {
-    const count = ref(0)
-    const click = () => count.value++
 
     return () => (
-      <div onClick={click}>{count.value}</div>
+      <div >
+        <div class="link">
+          <RouterLink to="/">bar</RouterLink> |
+          <RouterLink to="/foo">foo</RouterLink>
+        </div>
+        <RouterView></RouterView>
+      </div>
     )
   }
 })
