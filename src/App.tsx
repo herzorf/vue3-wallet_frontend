@@ -5,7 +5,7 @@ export const App = defineComponent({
 
     return () => (
       <div >
-        <div class="link">
+        <div class="link" >
           <RouterLink to="/">bar</RouterLink> |
           <RouterLink to="/foo">foo</RouterLink>
         </div>
