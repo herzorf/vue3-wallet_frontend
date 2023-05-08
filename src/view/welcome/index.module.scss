@@ -1,3 +1,19 @@
 .wrapper{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
     border: 1px solid red;
+    >header{
+        background: #69c1c0;
+    }
+    >main{
+        background: #95c346;
+        flex-grow: 1;
+
+    }
+    >footer{
+        background: #a43592;
+
+    }
 }
