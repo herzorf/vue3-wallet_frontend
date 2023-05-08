@@ -2,18 +2,16 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-
-    border: 1px solid red;
+    // 从上到下背景线性渐变
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, EEF1FF 0%,B1B2FF 100%);
     >header{
-        background: #69c1c0;
+        
     }
     >main{
-        background: #95c346;
         flex-grow: 1;
 
     }
     >footer{
-        background: #a43592;
-
     }
 }
