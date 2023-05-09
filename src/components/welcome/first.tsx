@@ -7,6 +7,7 @@ export const First = defineComponent({
             <div class={styles.wrapper}>
                 <div class="card">
                     <img src={saving} alt="" />
+                    <h2>会挣钱<br />还要会省钱</h2>
                 </div>
                 <div class="footNav">
                     <router-link class="fake" to="/welcome/second">下一页</router-link>

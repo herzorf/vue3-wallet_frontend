@@ -11,8 +11,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             > img{
                 height: 150px;
+            }
+            >h2{
+              margin-top: 12px;
+              text-align: center;
+              font-weight: normal;
+              color: var(--levelforth);
             }
         }
         .fake{
