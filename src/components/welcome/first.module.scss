@@ -1,0 +1,30 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    :global{
+        .card{
+            flex-grow: 1;
+            padding: 30px;
+            background: var(--levelone);
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            > img{
+                height: 150px;
+            }
+        }
+        .fake{
+            visibility: hidden;
+        }
+        .footNav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 24px;
+            padding-top: 22px;
+            color: var(--levelforth);
+        }
+    }
+}
