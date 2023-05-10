@@ -6,7 +6,7 @@ import { Welcome } from '../view/welcome/index.tsx'
 
 export const routes = [
     {
-        path: '/welcome', component: Welcome,
+        path: '/welcome', component: Welcome, redirect: '/welcome/first',
         children: [
             { path: 'first', component: First },
             { path: 'second', component: Second },
