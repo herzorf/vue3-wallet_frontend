@@ -12,7 +12,7 @@ export const First = defineComponent({
                 <div class="footNav">
                     <router-link class="fake" to="/welcome/second">下一页</router-link>
                     <router-link to="/welcome/second">下一页</router-link>
-                    <router-link to="/welcome/second">跳过</router-link>
+                    <router-link to="/welcome/start">跳过</router-link>
                 </div>
             </div>
         )

@@ -5,6 +5,7 @@ import { Third } from '../components/welcome/third.tsx'
 import { Welcome } from '../view/welcome/index.tsx'
 
 export const routes = [
+    { path: '/', redirect: '/welcome/first' },
     {
         path: '/welcome', component: Welcome, redirect: '/welcome/first',
         children: [
