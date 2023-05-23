@@ -1,9 +1,8 @@
 import saving from "../../assets/icons/saving.svg"
 import { FunctionalComponent } from "vue"
-import { WelcomeLayout } from "./template"
+import { WelcomeLayout } from "./welcomeTemplate"
 export const First: FunctionalComponent = () => {
     return (
-
         <WelcomeLayout>
             {{
                 img: () => <img src={saving} alt="" />,
@@ -12,7 +11,7 @@ export const First: FunctionalComponent = () => {
                     <>
                         <router-link class="fake" to="/welcome/second">下一页</router-link>
                         <router-link to="/welcome/second">下一页</router-link>
-                        <router-link to="/welcome/start">跳过</router-link>
+                        <router-link to="/start">跳过</router-link>
                     </>
                 )
             }}

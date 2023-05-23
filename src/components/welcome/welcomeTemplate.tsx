@@ -6,7 +6,7 @@ export const WelcomeLayout: FunctionalComponent = (_, context) => {
         <div class={styles.wrapper}>
             <div class="card">
                 {slots.img?.()}
-                <h2>{slots?.title?.()}</h2>
+                {slots?.title?.()}
             </div>
             <div class="footNav">
                 {slots.footNav?.()}

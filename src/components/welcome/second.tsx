@@ -1,20 +1,20 @@
-import { defineComponent } from 'vue'
-import styles from "./first.module.scss"
 import clock from "../../assets/icons/clock.svg"
-export const Second = defineComponent({
-    setup() {
-        return () => (
-            <div class={styles.wrapper}>
-                <div class="card">
-                    <img src={clock} alt="" />
-                    <h2>每日提醒<br />不会漏掉每一笔账单</h2>
-                </div>
-                <div class="footNav">
-                    <router-link class="fake" to="/welcome/third">下一页</router-link>
-                    <router-link to="/welcome/third">下一页</router-link>
-                    <router-link to="/welcome/start">跳过</router-link>
-                </div>
-            </div>
-        )
-    }
-})
+import { WelcomeLayout } from "./welcomeTemplate"
+export const Second = () => {
+    return (
+        <WelcomeLayout>
+            {{
+                img: () => <img src={clock} alt="" />,
+                title: () => <h2>每日提醒<br />不会漏掉每一笔账单</h2>,
+                footNav: () => (
+                    <>
+                        <router-link class="fake" to="/welcome/third">下一页</router-link>
+                        <router-link to="/welcome/third">下一页</router-link>
+                        <router-link to="/start">跳过</router-link>
+                    </>
+                )
+            }}
+        </WelcomeLayout>
+    )
+}
+Second.displayName = "Second"
