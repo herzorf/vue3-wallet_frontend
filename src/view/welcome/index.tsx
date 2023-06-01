@@ -11,8 +11,11 @@ export const Welcome = defineComponent({
                     <h1>花钱记账</h1>
                 </header>
                 <main>
-                    <RouterView></RouterView>
+                    <RouterView name='main' />
                 </main>
+                <footer>
+                    <RouterView name='footer' />
+                </footer>
             </div>
         )
     }

@@ -2,7 +2,6 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: rgb(255,255,255);
     background: linear-gradient(180deg, #B1B2FF 0%,#EEF1FF 100%);
     > header{
         display: flex;
@@ -16,10 +15,37 @@
         }
     }
     > main{
-        flex-grow: 1;
-        padding: 30px;
+            flex-grow: 1;
+            margin: 30px;
+            background: var(--levelone);
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            > img{
+                height: 150px;
+                }
+            >h2{
+              margin-top: 12px;
+              text-align: center;
+              font-weight: normal;
+              color: var(--levelforth);
+            }
+        }
+    >footer{
         display: flex;
-        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 24px;
+        padding-top: 22px;
+        color: var(--levelforth);
+        :global{
+            .fake{
+                border: 1px solid red;
+                visibility: hidden;
+            }
+        }
     }
 }
 

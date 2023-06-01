@@ -1,4 +1,4 @@
-import styles from "./first.module.scss"
+import styles from "./welcomeTemplate.module.scss"
 import { FunctionalComponent } from "vue"
 export const WelcomeLayout: FunctionalComponent = (_, context) => {
     const { slots } = context
