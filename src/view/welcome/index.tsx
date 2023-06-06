@@ -1,4 +1,4 @@
-import { Transition, defineComponent } from 'vue'
+import { Transition, VNode, defineComponent } from 'vue'
 import styles from "./index.module.scss"
 import { RouterView } from 'vue-router'
 import logo from "../../assets/icons/logo.svg"
@@ -12,9 +12,15 @@ export const Welcome = defineComponent({
                 </header>
                 <main>
                     <RouterView name='main'>
-                        {(obj: any) => (
-                            <Transition name="slide-fade">
-                                {obj.Component}
+                        {({ Component }: { Component: VNode }) => (
+                            <Transition
+                                name="slide-fade"
+                                enterFromClass={styles.slideFadeEnterFrom}
+                                leaveToClass={styles.slideFadeLeaveTo}
+                                enterActiveClass={styles.slideFadeEnterActive}
+                                leaveActiveClass={styles.slideFadeLeaveActive}
+                            >
+                                {Component}
                             </Transition>
                         )
                         }
