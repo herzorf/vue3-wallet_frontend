@@ -13,7 +13,7 @@ export const Welcome = defineComponent({
                 <main>
                     <RouterView name='main'>
                         {(obj: any) => (
-                            <Transition name="fade">
+                            <Transition name="slide-fade">
                                 {obj.Component}
                             </Transition>
                         )
