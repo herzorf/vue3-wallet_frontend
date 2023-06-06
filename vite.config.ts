@@ -10,6 +10,11 @@ export default defineConfig({
     mergeProps: true
   }),
   ],
+  css: {
+    modules: {
+      localsConvention: 'camelCaseOnly'
+    }
+  },
   //设置 0.0.0.0预览
   server: {
     host: '0.0.0.0',
