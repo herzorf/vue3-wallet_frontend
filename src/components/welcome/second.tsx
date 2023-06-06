@@ -3,10 +3,10 @@ import clock from "../../assets/icons/clock.svg"
 import { WelcomeLayout } from "./welcomeTemplate"
 export const SecondMain: FunctionalComponent = () => {
     return (
-        <>
+        <main>
             <img src={clock} alt="" />
             <h2>每日提醒<br />不会漏掉每一笔账单</h2>
-        </>
+        </main>
     )
 }
 SecondMain.displayName = "SecondMain"

@@ -3,10 +3,10 @@ import { FunctionalComponent } from "vue"
 import { WelcomeLayout } from "./welcomeTemplate"
 export const FirstMain: FunctionalComponent = () => {
     return (
-        <>
+        <main>
             <img src={saving} alt="" />
             <h2>会挣钱<br />还要会省钱</h2>
-        </>
+        </main>
     )
 }
 FirstMain.displayName = "FirstMain"

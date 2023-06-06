@@ -3,10 +3,10 @@ import cloud from "../../assets/icons/cloud.svg"
 import { WelcomeLayout } from './welcomeTemplate'
 export const ForthMain: FunctionalComponent = () => {
     return (
-        <>
+        <main>
             <img src={cloud} alt="" />
             <h2>每日提醒<br />不会漏掉每一笔账单</h2>
-        </>
+        </main>
     )
 }
 ForthMain.displayName = "ForthMain"
