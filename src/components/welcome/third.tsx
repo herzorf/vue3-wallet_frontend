@@ -1,11 +1,13 @@
 import { FunctionalComponent } from 'vue'
 import statistics from "../../assets/icons/statistics.svg"
+import styles from "./welcome.module.scss"
+
 export const ThirdMain: FunctionalComponent = () => {
     return (
-        <main>
+        <div class={styles.card}>
             <img src={statistics} alt="" />
             <h2>每日提醒<br />不会漏掉每一笔账单</h2>
-        </main>
+        </div>
     )
 }
 ThirdMain.displayName = "ThirdMain"

@@ -17,21 +17,12 @@
      main{
             flex-grow: 1;
             margin: 30px;
-            background: var(--levelone);
             border-radius: 6px;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-             img{
-                height: 150px;
-                }
-            h2{
-              margin-top: 12px;
-              text-align: center;
-              font-weight: normal;
-              color: var(--levelforth);
-            }
+            position: relative;
         }
     footer{
         display: flex;

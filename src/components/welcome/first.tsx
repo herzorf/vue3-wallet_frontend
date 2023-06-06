@@ -1,11 +1,12 @@
 import saving from "../../assets/icons/saving.svg"
 import { FunctionalComponent } from "vue"
+import styles from "./welcome.module.scss"
 export const FirstMain: FunctionalComponent = () => {
     return (
-        <main>
+        <div class={styles.card}>
             <img src={saving} alt="" />
             <h2>会挣钱<br />还要会省钱</h2>
-        </main>
+        </div>
     )
 }
 FirstMain.displayName = "FirstMain"
