@@ -1,12 +1,13 @@
 import { FunctionalComponent } from "vue"
-import cloud from "../../assets/icons/cloud.svg"
 import styles from "./welcome.module.scss"
 
 export const ForthMain: FunctionalComponent = () => {
     return (
         <div class={styles.card}>
 
-            <img src={cloud} alt="" />
+            <svg>
+                <use xlinkHref={`#cloud`} />
+            </svg>
             <h2>每日提醒<br />不会漏掉每一笔账单</h2>
         </div>
     )

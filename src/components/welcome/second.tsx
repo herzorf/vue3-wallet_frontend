@@ -1,11 +1,12 @@
 import { FunctionalComponent } from "vue"
-import clock from "../../assets/icons/clock.svg"
 import styles from "./welcome.module.scss"
 
 export const SecondMain: FunctionalComponent = () => {
     return (
         <div class={styles.card}>
-            <img src={clock} alt="" />
+            <svg>
+                <use xlinkHref={`#clock`} />
+            </svg>
             <h2>每日提醒<br />不会漏掉每一笔账单</h2>
         </div>
     )

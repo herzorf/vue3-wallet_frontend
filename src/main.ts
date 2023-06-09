@@ -4,7 +4,7 @@ import { App } from './App.tsx'
 import { createRouter } from "vue-router"
 import { routes } from './router/routes.tsx'
 import { history } from './shared/history.ts'
-
+import "@svgstore"
 const router = createRouter({
     history,
     routes,

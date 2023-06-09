@@ -1,10 +1,12 @@
-import saving from "../../assets/icons/saving.svg"
 import { FunctionalComponent } from "vue"
 import styles from "./welcome.module.scss"
 export const FirstMain: FunctionalComponent = () => {
     return (
         <div class={styles.card}>
-            <img src={saving} alt="" />
+            <svg>
+                <use xlinkHref={`#saving`} />
+            </svg>
+
             <h2>会挣钱<br />还要会省钱</h2>
         </div>
     )

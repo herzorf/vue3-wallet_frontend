@@ -1,11 +1,12 @@
 import { FunctionalComponent } from 'vue'
-import statistics from "../../assets/icons/statistics.svg"
 import styles from "./welcome.module.scss"
 
 export const ThirdMain: FunctionalComponent = () => {
     return (
         <div class={styles.card}>
-            <img src={statistics} alt="" />
+            <svg>
+                <use xlinkHref={`#statistics`} />
+            </svg>
             <h2>每日提醒<br />不会漏掉每一笔账单</h2>
         </div>
     )
