@@ -1,8 +1,15 @@
-import { Transition, VNode, defineComponent } from 'vue'
+import { Transition, VNode, defineComponent, ref, watchEffect } from 'vue'
 import styles from "./index.module.scss"
 import { RouterView } from 'vue-router'
+import { useSwipe } from '../../hooks/useSwipe'
 export const Welcome = defineComponent({
+
     setup() {
+        const main = ref<HTMLElement | null>(null)
+        const { direction, swipe } = useSwipe(main)
+        watchEffect(() => {
+            console.log(direction.value, swipe.value)
+        })
         return () => (
             <div class={styles.wrapper}>
                 <header>
@@ -11,7 +18,7 @@ export const Welcome = defineComponent({
                     </svg>
                     <h1>花钱记账</h1>
                 </header>
-                <main>
+                <main ref={main}>
                     <RouterView name='main'>
                         {({ Component }: { Component: VNode }) => (
                             <Transition
