@@ -1,14 +1,30 @@
 import { Transition, VNode, defineComponent, ref, watchEffect } from 'vue'
 import styles from "./index.module.scss"
-import { RouterView } from 'vue-router'
+import { RouterView, useRoute, useRouter } from 'vue-router'
 import { useSwipe } from '../../hooks/useSwipe'
+import { throttle } from '../../shared/throttle'
 export const Welcome = defineComponent({
 
     setup() {
+        const router = useRouter()
+        const route = useRoute()
         const main = ref<HTMLElement | null>(null)
-        const { direction, swipe } = useSwipe(main)
+        const { direction, swipe } = useSwipe(main, {
+            beforeStart: (e) => { e.preventDefault() }
+        })
+        const routeMap = {
+            "first": "/welcome/second",
+            "second": "/welcome/third",
+            "third": "/welcome/forth",
+            "forth": "/start",
+        }
+        const changeRouter = throttle(() => {
+            router.push(routeMap[route.name as keyof typeof routeMap])
+        }, 500)
         watchEffect(() => {
-            console.log(direction.value, swipe.value)
+            if (swipe.value && direction.value === 'left') {
+                changeRouter()
+            }
         })
         return () => (
             <div class={styles.wrapper}>

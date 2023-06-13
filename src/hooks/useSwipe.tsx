@@ -5,7 +5,16 @@ type position = {
     y: number
 }
 
-export const useSwipe = (element: Ref<HTMLElement | null>) => {
+interface option {
+    beforeStart?: (e: TouchEvent) => void,
+    afterStart?: (e: TouchEvent) => void,
+    beforeMove?: (e: TouchEvent) => void,
+    afterMove?: (e: TouchEvent) => void,
+    beforeEnd?: (e: TouchEvent) => void,
+    afterEnd?: (e: TouchEvent) => void,
+}
+
+export const useSwipe = (element: Ref<HTMLElement | null>, options?: option) => {
     const start = ref<position>()
     const end = ref<position>()
     const swipe = ref(false)
@@ -31,20 +40,26 @@ export const useSwipe = (element: Ref<HTMLElement | null>) => {
         return undefined
     })
     const onStart = (e: TouchEvent) => {
+        options?.beforeStart?.(e)
         start.value = {
             x: e.touches[0].clientX,
             y: e.touches[0].clientY
         }
         swipe.value = true
+        options?.afterStart?.(e)
     }
     const onMove = (e: TouchEvent) => {
+        options?.beforeMove?.(e)
         end.value = {
             x: e.touches[0].clientX,
             y: e.touches[0].clientY
         }
+        options?.afterMove?.(e)
     }
-    const onEnd = () => {
+    const onEnd = (e: TouchEvent) => {
+        options?.beforeEnd?.(e)
         swipe.value = false
+        options?.afterEnd?.(e)
     }
     onMounted(() => {
         element.value?.addEventListener("touchstart", onStart)
