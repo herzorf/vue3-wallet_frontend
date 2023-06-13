@@ -17,8 +17,8 @@ export const ForthAction: FunctionalComponent = () => {
     return (
         <>
             <router-link class="fake" to="/welcome/third">下一页</router-link>
-            <router-link to="/start">下一页</router-link>
-            <router-link to="/start">跳过</router-link>
+            <router-link to="/start">完成</router-link>
+            <router-link to="/start" class="fake" >跳过</router-link>
         </>
     )
 }
