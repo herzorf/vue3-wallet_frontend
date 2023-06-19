@@ -1,0 +1,15 @@
+.wrapper{
+    background: var(--levelforth);
+    width: 56px;
+    height: 56px;
+    border-radius: var(--float-button-border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    :global{
+        svg{
+           width: 28px;
+           height: 28px;
+        }
+    }
+}
