@@ -21,7 +21,7 @@ export const Start = defineComponent({
                 <div class="button-wrapper">
                     <Button class="button" onClick={() => { console.log(111) }}>测试</Button>
                 </div>
-                <FloatButton name='add' />
+                <FloatButton class="floatbutton" name='add' />
             </div>
         )
     }
