@@ -3,7 +3,6 @@ export const Icon = defineComponent({
     props: {
         name: {
             type: String,
-            required: true
         }
     },
     setup(props) {
