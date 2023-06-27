@@ -8,7 +8,7 @@ export const Start = defineComponent({
     setup() {
         return () => (
             <div class={styles.wrapper}>
-                <Center class="center" >
+                <Center direction="horizontal" >
                     <Icon name='saving' />
                 </Center>
                 <div class="button-wrapper">

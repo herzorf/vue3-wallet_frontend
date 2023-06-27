@@ -3,12 +3,13 @@ import styles from "./index.module.scss"
 export const Center = defineComponent({
     props: {
         direction: {
-            type: String as PropType<"center">
+            type: String as PropType<'horizontal' | 'vertical'>,
+            default: "horizontal"
         }
     },
-    setup(_, context) {
+    setup({ direction }, context) {
         return () => (
-            <div class={styles.wrapper}>
+            <div class={[styles.wrapper, direction]}>
                 {context.slots.default?.()}
             </div>
         )

@@ -1,7 +1,15 @@
 .wrapper{
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 100px;
+  
+}
+:global{
+    .horizontal{
+        flex-direction: column;
+    }
+    .vertical{
+        flex-direction: row;
+    }
 }
