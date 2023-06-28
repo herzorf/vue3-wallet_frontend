@@ -19,7 +19,7 @@ export const Start = defineComponent({
                     <Icon name='saving' />
                 </Center>
                 <div class="button-wrapper">
-                    <Button class="button" onClick={() => { console.log(111) }}>测试</Button>
+                    <Button class="button" onClick={() => { console.log(111) }}>开始记账</Button>
                 </div>
                 <FloatButton class="floatbutton" name='add' />
             </div>
