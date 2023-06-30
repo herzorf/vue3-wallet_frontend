@@ -5,8 +5,16 @@
     width: 70%;
     height: calc(100% - var(--overlay-safe-area));
     section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
         background: var(--levelfour);
         height: 20%;
+        padding-left: var(--overlay-safe-area);
+        p{
+            color: var(--overlay-bg);
+        }
     }
     ul{
         background: var(--levelone);

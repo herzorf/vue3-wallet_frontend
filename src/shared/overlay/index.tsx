@@ -10,6 +10,7 @@ export const Overlay = defineComponent({
             <div class={styles.wrapper} >
                 <section>
                     <h2>用户未登录</h2>
+                    <p>点击登陆</p>
                 </section>
                 <ul>
                     <li>
