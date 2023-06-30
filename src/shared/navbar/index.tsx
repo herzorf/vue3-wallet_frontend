@@ -6,8 +6,7 @@ export const Navbar = defineComponent({
             type: String,
         }
     },
-    setup(props, context) {
-        console.log(props.icon)
+    setup(_, context) {
         return () => (
             <div class={styles.wrapper}>
                 {context.slots.icon?.()}

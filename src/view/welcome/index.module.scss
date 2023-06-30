@@ -2,7 +2,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(180deg, var(--levelforth) 0%,var(--levelone) 100%);
+    background: linear-gradient(180deg, var(--levelfour) 0%,var(--levelone) 100%);
      header{
         display: flex;
         justify-content: center;
@@ -30,7 +30,7 @@
         align-items: center;
         font-size: 24px;
         padding: 12px 24px;
-        color: var(--levelforth);
+        color: var(--levelfour);
         :global{
             .fake{
                 border: 1px solid red;

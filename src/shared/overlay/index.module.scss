@@ -1,0 +1,38 @@
+.wrapper{
+    position: fixed;
+    top: 30px;
+    left: 0px;
+    width: 70%;
+    height: calc(100% - var(--overlay-safe-area));
+    section{
+        background: var(--levelfour);
+        height: 20%;
+    }
+    ul{
+        background: var(--levelone);
+        height: 80%;
+        padding-top: 2em;
+        li{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 1em;
+            margin-left: 1em;
+        }
+    }
+    :global{
+        .icon{
+            width: 1.5em;
+            height: 1.5em;
+        }
+    }
+}
+.mask{
+    position: fixed;
+    width: 30%;
+    top: var(--overlay-safe-area);
+    background: var(--overlay-bg);
+
+    height: 100%;
+    right: 0;
+}
