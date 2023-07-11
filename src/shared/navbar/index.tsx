@@ -11,7 +11,7 @@ export const Navbar = defineComponent({
             <div class={styles.wrapper}>
                 {context.slots.icon?.()}
                 <span>
-                    {context.slots.default?.()}
+                    {context.slots.title?.()}
                 </span>
             </div>
         )
