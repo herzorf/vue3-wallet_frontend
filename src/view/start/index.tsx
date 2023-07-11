@@ -6,6 +6,7 @@ import { Center } from '../../shared/center'
 import { Icon } from '../../shared/icon'
 import { Navbar } from '../../shared/navbar'
 import { Overlay } from '../../shared/overlay'
+import { RouterLink } from 'vue-router'
 export const Start = defineComponent({
     setup() {
         const overlayVisible = ref(false)
@@ -24,9 +25,13 @@ export const Start = defineComponent({
                     <Icon name='saving' />
                 </Center>
                 <div class="button-wrapper">
-                    <Button class="button">开始记账</Button>
+                    <RouterLink to="item/create">
+                        <Button class="button">开始记账</Button>
+                    </RouterLink>
                 </div>
-                <FloatButton class="floatbutton" name='add' />
+                <RouterLink to="item/create">
+                    <FloatButton class="floatbutton" name='add' />
+                </RouterLink>
                 {
                     overlayVisible.value && <Overlay onclose={(e: MouseEvent) => {
                         e.stopPropagation()

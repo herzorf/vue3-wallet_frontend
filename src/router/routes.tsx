@@ -1,7 +1,10 @@
+import { ItemCreate } from '../components/items/itemCreate/index.tsx'
+import { ItemList } from '../components/items/itemList/index.tsx'
 import { FirstAction, FirstMain } from '../components/welcome/first.tsx'
 import { ForthAction, ForthMain } from '../components/welcome/forth.tsx'
 import { SecondAction, SecondMain } from '../components/welcome/second.tsx'
 import { ThirdAction, ThirdMain } from '../components/welcome/third.tsx'
+import { Items } from '../view/items/index.tsx'
 import { Start } from '../view/start/index.tsx'
 import { Welcome } from '../view/welcome/index.tsx'
 
@@ -45,5 +48,11 @@ export const routes = [
         ]
     },
     { path: '/start', component: Start },
+    {
+        path: "/item", component: Items, children: [
+            { path: "", component: ItemList },
+            { path: "create", component: ItemCreate }
+        ]
+    }
 
 ]
