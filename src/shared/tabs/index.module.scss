@@ -1,0 +1,11 @@
+.wrapper{
+    :global{
+        .nav{
+            display: flex;
+            width: 100%;
+            .active{
+                border: 1px solid red;
+            }
+        }
+    }
+}

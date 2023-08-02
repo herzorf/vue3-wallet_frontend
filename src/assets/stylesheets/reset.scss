@@ -11,7 +11,9 @@ a{
     color: inherit;
     text-decoration: none;
 }
-
+ol,ul{
+    list-style: none;
+}
 button{
     font-family: inherit;
 }
